@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151867772-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-151867772-4');
+    </script>
+    <title>Google Analytic Testing Site</title>
+
+</head>
+<body>
+    {% include 'navbar.html' %}
+    {% block content %}
+    This is base.html
+    {% endblock%}
+</body>
+</html>
