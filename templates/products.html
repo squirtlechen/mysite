@@ -4,7 +4,7 @@
 
 <p>This is Product page</p>
 <p>Title: {{ object.title }}</p>
-<p>Description: {{ object.desciption }}</p>
+<p>Description: {% if object.description != None %}{{ object.description }}{% else %}Coming Soon{% endif %}</p>
 <p>Price: {{ object.price }}</p>
 <p>Summary: {{ object.summary }}</p>
 
