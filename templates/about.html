@@ -15,11 +15,11 @@
 <ul>
     {% for my_item in my_list %}
     {% if my_item == 12 %}
-        <li>{{ forloop.counter }} - {{my_item| add:4 }}</li>
+        <li>Item{{ forloop.counter }} - {{my_item| add:4 }}</li>
     {% elif my_item == 34 %}
-        <li>{{ forloop.counter }} - {{my_item| add:6 }}</li>
+        <li>Item{{ forloop.counter }} - {{my_item| add:6 }}</li>
     {% else %}
-        <li>{{ forloop.counter }} - {{my_item}}</li>
+        <li>Item{{ forloop.counter }} - {{my_item}}</li>
     {% endif %}
     {% endfor %}
 </ul>
