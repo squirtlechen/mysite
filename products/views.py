@@ -1,7 +1,26 @@
 from django.shortcuts import render
-from .forms import ProductForm
+from .forms import ProductForm, RawProductForm
 from .models import Product
 # Create your views here.
+
+def product_create_view_pure(request):
+    try:
+        print(request,request.method)
+        my_form = RawProductForm()
+        if request.method == "POST":
+            my_form = RawProductForm(request.POST)
+            if my_form.is_valid():
+                print(my_form.cleaned_data)
+            else:
+                print(my_form.errors)
+        context={
+            'form':my_form
+            }
+            
+        return render(request, "products_create_pureform.html", context)
+    except:
+        print("Get some error")
+
 def product_create_view_html(request):
     print("GET:",request.GET)
     print("POST:",request.POST)

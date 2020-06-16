@@ -20,13 +20,14 @@ from pages.views import home_view, about_view
 from products.views import product_detail_view
 from products.views import product_create_view_html
 from products.views import product_create_view_django
-
+from products.views import product_create_view_pure
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
     path('about', about_view, name='Pages'),
     path('products', product_detail_view, name='Products'),
-    path('createbyhtml', product_create_view_html, name='Create'),
-    path('createbydjango', product_create_view_django, name='Create'),
+    path('createbyhtml', product_create_view_html, name='Createbyhtml'),
+    path('createbydjango', product_create_view_django, name='createbydjango'),
+    path('createbypureform', product_create_view_pure, name='createbypureform'),
 ]

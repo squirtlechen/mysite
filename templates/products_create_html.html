@@ -3,7 +3,7 @@
 {% block content %}
 
 <h1>Create Product by html POST</h1>
-<form action='.' method='POST'>{% csrf_token %}
+<form method='POST'>{% csrf_token %}
     <input type='text' name='title' placeholder='your title' />
     <br>
     <input type='text' name='description' placeholder='your desctiption' />
