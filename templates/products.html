@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<p>This is Product page</p>
-<p>Title: {{ object.title }}</p>
-<p>Description: {% if object.description != None %}{{ object.description }}{% else %}Coming Soon{% endif %}</p>
-<p>Price: {{ object.price }}</p>
-<p>Summary: {{ object.summary }}</p>
+
+
+{%for object in object_list %}
+<p>Product {{object.id}} : <a href='{{object.get_product_url}}'>{{ object.title }}</a></p>
+{% endfor %}
 
 {% endblock%}

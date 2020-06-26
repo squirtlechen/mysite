@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>This is Product page</p>
+<p>Title: {{ object.title }}</p>
+<p>Description: {% if object.description != None %}{{ object.description }}{% else %}Coming Soon{% endif %}</p>
+<p>Price: {{ object.price }}</p>
+<p>Summary: {{ object.summary }}</p>
+<input type='submit' value='Add to Cart' />
+
+{% endblock%}
