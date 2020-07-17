@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     #self-build 
     'products',
+    'blog',
 ]
 
 MIDDLEWARE = [

@@ -26,4 +26,5 @@ urlpatterns = [
     path('about', about_view, name='Pages'),
     path('table', table_view, name='table'),
     path('products/', include('products.urls')),
+    path('blog/', include('blog.urls')),
 ]
