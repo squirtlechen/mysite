@@ -17,14 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 
 from pages.views import home_view, about_view
-from analysis.views import table_view
+
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
     path('about', about_view, name='Pages'),
-    path('table', table_view, name='table'),
+    path('analysis/', include('analysis.urls')),
     path('products/', include('products.urls')),
     path('blog/', include('blog.urls')),
 ]
