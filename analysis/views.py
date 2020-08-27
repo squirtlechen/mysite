@@ -15,14 +15,13 @@ def table_view(request, *args, **kwargs):
         """
     query_job = client.query(query,location="asia-east1") 
     aircondition=query_job.to_dataframe()
-    context={} 
-    context['object'] = HttpResponse(aircondition.to_html())
-    return render(request, 'table.html', context)
+    show_table=aircondition.groupby(['SiteName','ItemName','Date'])[['Concentration']].mean()
+    return HttpResponse(show_table.to_html())
 
 class AnalysisView(View):
     template_name='analysis.html' 
     def get(self, request, id=None, *args, **kwargs):
         context={} 
-        obj = get_object_or_404(Tables)
+        obj = get_object_or_404(Table)
         context['object'] = obj
         return render(request, self.template_name, context)
