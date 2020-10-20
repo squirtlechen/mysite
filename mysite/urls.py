@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
 from pages.views import home_view, about_view
 
 
@@ -27,4 +28,6 @@ urlpatterns = [
     path('analysis/', include('analysis.urls')),
     path('products/', include('products.urls')),
     path('blog/', include('blog.urls')),
+    path('api/postings/', include('blog.api.urls')), 
+
 ]

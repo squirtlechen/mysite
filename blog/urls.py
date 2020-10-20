@@ -7,6 +7,6 @@ urlpatterns = [
     path('', ArticleListView.as_view(), name='Articles'),
     path('create', ArticleCreateView.as_view(), name='Create'),
     path('<int:id>/update', ArticleUpdateView.as_view(), name='article-update'),
-    path('<int:id>/delete', ArticleDeleteView.as_view(), name='aritcle-delete')
+    path('<int:id>/delete', ArticleDeleteView.as_view(), name='aritcle-delete'),
 
 ]
